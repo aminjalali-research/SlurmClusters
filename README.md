@@ -3,7 +3,7 @@ CheatSheet
 <details>
   <summary>📘 Git Commands </summary>
 
-  👉 [Read more in GitCommands.md](TimeSeriesFoundation.md)
+  👉 [Read more in about Git commands](GitCommands.md)
 
 </details>
 
