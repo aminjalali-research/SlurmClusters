@@ -37,7 +37,23 @@ git config --global --list  # Check your configuration
 ## Step 2: Open VS Code Terminal and Initialize Git in your Project
 Open terminal (Ctrl + backtick)
 ```bash
-git init
+git init # Initialize the Git repo
+```
+Create a .gitignore file to ignore everything except notebook/ and src/:
+```bash
+touch .gitignore
+```
+Edit the .gitignore file with this content (This means: Ignore everything (/*) But don’t ignore /notebook/ and /src/):
+```bash
+/*
+!/notebook/
+!/src/
+```
+Add and commit the changes:
+```bash
+git add .gitignore notebook src
+git commit -m "Track only notebook and src folders"
+
 git add .
 git commit -m "Initial commit"
 ```
