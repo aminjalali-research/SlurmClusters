@@ -69,5 +69,54 @@ This document lists the best GitHub repositories for computing model complexity 
   ) as prof:
       model(inputs)
 
+### [DeepSpeed Flops Profiler](https://github.com/microsoft/DeepSpeed)
+- Tracks FLOPs, MACs, parameters, and latency per module and device.
+- Designed for large-scale models (e.g., BERT, GPT).
+- Supports model parallelism and data parallelism in distributed training setups.
+- Outputs detailed layer-by-layer statistics during forward and backward passes.
+
+---
+
+### [NVIDIA PyProf](https://github.com/NVIDIA/PyProf)
+- A low-level GPU profiler that maps **CUDA kernel traces** to **PyTorch layers**.
+- Extracts and analyzes:
+  - Tensor Core usage
+  - Execution time per kernel
+  - Kernel occupancy and efficiency
+- Interfaces with NVIDIA tools like **Nsight Systems** and **nvprof**.
+
+---
+
+## 🎯 GPU & Memory Utilities
+
+### [Stonesjtu/pytorch_memlab](https://github.com/Stonesjtu/pytorch_memlab)
+- PyTorch-specific CUDA memory analysis toolkit.
+- Features:
+  - **Line-by-line memory profiling**
+  - **Live tensor tracking** (shows shapes, dtypes, sizes)
+  - **Peak memory reports** per Python line/function
+- Ideal for identifying **OOM errors**, **memory leaks**, and large tensors that dominate memory.
+
+---
+
+## ✅ Summary Table
+
+| Tool                                                                  | FLOPs / MACs | Params | GPU Usage | Memory | Runtime Metrics | Static / Dynamic |
+|-----------------------------------------------------------------------|--------------|--------|-----------|--------|------------------|------------------|
+| [THOP](https://github.com/Lyken17/pytorch-OpCounter)                  | ✅           | ✅     | ❌        | ❌     | ❌               | Static           |
+| [PTFlops](https://github.com/sovrasov/flops-counter.pytorch)         | ✅           | ✅     | ❌        | ❌     | ❌               | Static           |
+| [fvcore](https://github.com/facebookresearch/fvcore)                 | ✅           | ✅     | ❌        | ❌     | ❌               | Static           |
+| [Calculate-FLOPs](https://github.com/MrYxJ/Calculate-FLOPs)          | ✅           | ✅     | ❌        | ❌     | ❌               | Static           |
+| [Torchprofile](https://github.com/zhijian-liu/torchprofile)          | ✅           | ❌     | ❌        | ❌     | ❌               | Static           |
+| [Torchstat](https://github.com/Swall0w/torchstat)                    | ✅           | ✅     | ❌        | ✅     | ❌               | Static           |
+| [Flops-Profiler](https://github.com/cli99/Flops-Profiler)            | ✅           | ✅     | ✅        | ✅     | ✅               | Dynamic          |
+| [torch.profiler](https://pytorch.org/docs/stable/profiler.html)      | ✅           | ✅     | ✅        | ✅     | ✅               | Dynamic          |
+| [DeepSpeed](https://github.com/microsoft/DeepSpeed)                  | ✅           | ✅     | ✅        | ✅     | ✅               | Dynamic          |
+| [PyProf](https://github.com/NVIDIA/PyProf)                           | ✅           | ✅     | ✅        | ✅     | ✅               | Dynamic          |
+| [GPUtil](https://github.com/anderskm/gputil)                         | ❌           | ❌     | ✅        | ✅     | ❌               | Runtime Only     |
+| [pytorch_memlab](https://github.com/Stonesjtu/pytorch_memlab)        | ❌           | ❌     | ✅        | ✅     | ❌               | Runtime Only     |
+
+
+
 
   
