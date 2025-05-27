@@ -1,4 +1,4 @@
-CheatSheet
+Practical tools and methods for deep learning development and deployment
 
 <details>
   <summary> Git Commands </summary>
