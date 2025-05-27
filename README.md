@@ -20,3 +20,10 @@ CheatSheet
   👉 [ConnectRemotely.md](Remote.md)
 
 </details>
+
+<details>
+  <summary> Params, Computation time </summary>
+
+  👉 [ParamsComputation.md](ParamsComputation.md)
+
+</details>
