@@ -17,7 +17,7 @@ Practical tools and methods for deep learning development and deployment
 <details>
   <summary> Connect to workstation Remotely </summary>
 
-  👉 [ConnectRemotely.md](Remote.md)
+  👉 [ConnectRemotely.md](ConnectRemotely.md)
 
 </details>
 
