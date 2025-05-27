@@ -41,4 +41,33 @@ This document lists the best GitHub repositories for computing model complexity 
   calculate_flops_hf("bert-base-uncased")
   ```
 
+  ### [Swall0w/Torchstat](https://github.com/Swall0w/torchstat)
+- Outputs FLOPs, MACs, parameters, and memory.
+- Provides a CLI-style per-layer breakdown.
+- Useful for analyzing memory bottlenecks and expensive layers.
+
+---
+
+## ⚡ Dynamic Profilers (Runtime and GPU Metrics)
+
+### [cli99/Flops-Profiler](https://github.com/cli99/Flops-Profiler)
+- Logs runtime **FLOPs, MACs, latency, and throughput**.
+- Supports both CPU and GPU profiling.
+- Prints per-layer stats during forward/backward passes.
+
+---
+
+### [PyTorch Profiler (`torch.profiler`)](https://pytorch.org/docs/stable/profiler.html)
+- Official PyTorch profiler for **time, memory, and FLOPs**.
+- Visualizes results in **TensorBoard** or Chrome Trace.
+- Example usage:
+  ```python
+  with torch.profiler.profile(
+      activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],
+      with_flops=True,
+      record_shapes=True
+  ) as prof:
+      model(inputs)
+
+
   
