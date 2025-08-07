@@ -1,4 +1,4 @@
-# GPU 
+# GPU RTX 5070 Ti
 The RTX 5070 Ti requires NVIDIA driver 570+ with mandatory open-source kernel modules,currently only available through the graphics-drivers PPA on Ubuntu 24.04.2 LTS.
 Linux Mint Forums Ubuntu's default repositories lack the required drivers, making PPA installation essential for RTX 5070 Ti support as of August 2025.
 
@@ -10,7 +10,7 @@ Linux Mint Forums This architectural shift means traditional nvidia-driver-XXX p
 
 Critical warning: Using standard nvidia-driver-570 (proprietary) instead of nvidia-driver-570-open causes complete system failure
 
-
+```bash
 # Remove any existing drivers
 sudo apt purge nvidia-driver-*
 
@@ -25,3 +25,5 @@ sudo ./NVIDIA-Linux-x86_64-575.64.05.run
 sudo systemctl isolate multi-user.target # Boot to recovery mode
 sudo apt install nvidia-driver-575-open
 sudo update-grub && sudo reboot
+```
+# GPU Ubuntu 22.04 LTS and GeForce RTX 3090
