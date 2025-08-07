@@ -27,3 +27,4 @@ sudo apt install nvidia-driver-575-open
 sudo update-grub && sudo reboot
 ```
 # GPU Ubuntu 22.04 LTS and GeForce RTX 3090
+
